@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace string_manipulation
 {
@@ -6,7 +7,14 @@ namespace string_manipulation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-        }
+            Console.WriteLine("please inter string:");
+        
+            string content = Console.ReadLine();
+            string contentSpace = content.Replace(" ", "_");
+            string contentLeading = content.TrimStart();
+            string contentTraling = content.TrimEnd();
+            string Replace = content.Replace("a", "A");
+            Console.WriteLine($"{content }\n,{contentSpace}\n,{contentLeading}\n,{contentTraling}\n,{Replace}\n");
+                }
     }
 }
